@@ -11,12 +11,10 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/contacts")
-@CrossOrigin(origins = "*") // Allow requests from any origin (for local development)
+@CrossOrigin(origins = "*")
 public class ContactController {
-// ... inside the ContactController class
 
-    // UPDATE a contact's details
-    // UPDATE a contact's details
+    // UPDATE a contact details
     @PutMapping("/{id}")
     public ResponseEntity<Contact> updateContact(@PathVariable Long id, @RequestBody Contact contactDetails) {
         Optional<Contact> optionalContact = contactRepository.findById(id);

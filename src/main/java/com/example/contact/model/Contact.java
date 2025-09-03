@@ -4,12 +4,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-// import lombok.Data; // We are removing or commenting this out
 
-// @Data // REMOVE THIS ANNOTATION
 @Entity
 public class Contact {
-    // ... inside the Contact class
 
     private String profileImageUrl;
     private String contactGroup = "None"; // Default group
@@ -21,7 +18,6 @@ public class Contact {
     private String phoneNumber;
     private boolean isFavorite = false;
 
-    // --- MANUALLY ADD ALL OF THE FOLLOWING METHODS ---
 
     public Long getId() {
         return id;
